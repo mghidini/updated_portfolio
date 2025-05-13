@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+const { title = "Epimetheus", description = "Short intro about the project." } = Astro.props;
+---
+
+<Layout>
+    <h1>{title}</h1>
+    <p class="project-intro">{description}</p>
+
+    <section class="project-section">
+      <h2>Overview</h2>
+      <p>Epimetheus is a Clinical Decision Support System (CDSS) 
+        designed and developed by MUDI Lab </p>
+      <p>It implements Machine Learning models to provide predictions on the outcomes of orthopaedic surgical procedures, assisting the doctors in the clinical decision-making process.
+        The support aims to highlight a very delicate aspect of the decision-making journey: the representation of uncertainty.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Epimetheus mission: visualize uncertainty</h2>
+      <p>CDSS can help doctors to have an objective view of the patient state and they can provide suggestions based on clinical and scientific evidence.
+        However, the medical field is rarely a simple and absolute context. Uncertainty is an inbuilt element of medical practice and it highly influences de decision-making process. The data used to perform clinical decisions are often ambiguous, contradictory or scarce. 
+        A good approach requires balance between the medical expertise, the available technologies and the patient needs. This is why in clinical decision making is very important to develop safe and secure systems that are capable of communicating and representing uncertainty. </p>
+      <img src="/images/placeholder2.jpg" alt="Process step" />
+    </section>
+
+    <section class="project-section">
+      <h2>My role</h2>
+      <p>I worked on Epimetheus as a thesis project intern for my bachelor thesis.
+        My main task was to improve the backend and the logic flow of the application, while actively communicating with a Frontend Engineer / UX designer to ensure coherence and efficiency across the product.
+        I was also in charge of the deployment and I redacted a complete documentation of my work.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Tech stack</h2>
+      <ul>
+        <li><a href="https://live-site.com" target="_blank">Live Site</a></li>
+        <li><a href="https://github.com/yourrepo" target="_blank">GitHub Repo</a></li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+        <h2>Analysis of the existing application</h2>
+        <p>Before starting working on the code I decided to analyse and test the existing application, to get some context and evaluate the state of the product.</p>
+        <p>Epimetheus is a Web App: it provides users with simple and intuitive access via a web browser.</p>
+        <p>The interface consists of two pages:
+            On the first page, the data entry form is presented, where the doctor selects the procedure (hip, knee or spine) and inputs the patient's information.
+            Once all fields are filled out, the user initiates the prediction calculation.
+            The predictions are calculated by Machine Learning Models. There are two types of model for every procedure: a Classification model and a Regression model, both using Supervised Learning.
+            If there are no errors, the user lands on the results page.
+            The results of the predictions are shown through the use of clear and intuitive diagrams.</p>
+      </section>
+
+      <section class="project-section">
+        <h2>Critical points</h2>
+        <p>After analysing the application, some pain points and weakness emerged:</p>
+        <ul>
+          <li>Monolithic architecture</li>
+          <li>Application logic managed through Javascript (Front-end side)</li>
+          <li>Some elements hard-coded in Javascript.</li>
+          <li>No data validation and error handling before the data is processed by the models.</li>
+        </ul>
+        <p>After detecting and evaluating those issues, I decided to design a new architecture for Epimetheus.</p>
+      </section>
+
+      <section class="project-section">
+        <h2>The new architecture</h2>
+        <p>I implemented a two-tier architecture, creating two separate entities for the Frontend and the Backend of the application.
+            The front-end part consists of a React application, while the back-end is a Flask server implementing a RESTful API.
+            Specific endpoints were created for the front-end and back-end to communicate and exchange data. </p>
+        <p>This new approach has several benefits:</p>
+        <ul>
+          <li>Ability to develop and test back-end and UI as two separate entities.</li>
+          <li>More scalability</li>
+          <li>Modularity</li>
+          <li>More flexibility for future developments</li>
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2>Deploying the application</h2>
+        <p>After considering and testing different approaches, such as online porting tools like Pythonanywhere, I choose to deploy the  using an Apache Server, configured on a computer with a public IP Address.
+            This choice ensures complete control over the hosting environment and server configuration and gives us the capability to handle high volumes of traffic while maintaining high performance.</p>
+        <img src="/images/placeholder2.jpg" alt="Process step" />
+      </section>
+
+      <section class="project-section">
+        <h2>Future vision</h2>
+        <p>The new two-tier architecture made Epimetheus system more scalable and open for future enhancements. These are a few that I'd like to highlight:</p>
+        <ul>
+          <li>Integrating new ML models for different surgical procedures.</li>
+          <li>Creating a database to keep the form templates of the different procedures</li>
+          <li>Creating a database to store the data about system users and activity, in order to be able to provide statistics.</li>
+          <li>Completing the deployment by integrating the React Frontend with the Apache Server.</li>
+          <li>Testing the app to gather feedback.</li>
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2>Conclusions and takeaways</h2>
+        <p>In the context of technological evolution and the growing importance of data and AI in the healthcare field, applications like Epimetheus represent a valuable resource for improving the quality of medical care, simplifying doctor-patient communication and promoting data understanding.</p>
+      </section>
+
+    <a href="/" class="back-link">← Back to Projects</a>
+</Layout>

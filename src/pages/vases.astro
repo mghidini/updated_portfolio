@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+const { title = "Vases are not born, they are cooked.", description = "Desruptive workshop exploring the connection between AI and Creativity" } = Astro.props;
+---
+
+<Layout>
+    <h1>{title}</h1>
+    <p class="project-intro">{description}</p>
+
+    <section class="project-section">
+      <p>Interdisciplinary workshop led by Raquel Quevedo, at Elisava Barcelona.</p>
+    </section>
+
+    <a href="/" class="back-link">← Back to Projects</a>
+</Layout>

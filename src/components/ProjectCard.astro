@@ -1,0 +1,28 @@
+---
+const { title, image, link } = Astro.props;
+---
+
+<a href={link} class="project-card">
+  <img src={image} alt={title} />
+  <p id ="project-title">{title}</p>
+</a>
+
+<style>
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+  }
+
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #project-title {
+    font-family: "Familjen Grotesk", sans-serif;
+  }
+</style>
