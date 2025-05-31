@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 
 const projects = [
-  { title: "Epimetheus", image: "src/assets/placeholder.png", link: "epimetheus" },
-  { title: "VIVI", image: "src/assets/placeholder.png", link: "vivi" },
-  { title: "Digital Vases", image: "src/assets/placeholder.png", link: "vases" },
-  { title: "Technofossils_archive", image: "src/assets/placeholder.png", link: "technofossils" },
+  { title: "EPIMETHEUS", image: "src/assets/epimetheus/epimetheus_cover.png", link: "epimetheus", description: "Visualizing uncertainty and supporting clinical decisions with Machine Learning models."},
+  { title: "VIVI", image: "src/assets/vivi/vivi_cover.png", link: "vivi", description: "Growing and nurturing human relationships through an AI chatbot integrated in a mobile application." },
+  { title: "VASES ARE NOT BORN, THEY ARE COOKED", image: "src/assets/vases/vase_cover.png", link: "vases", description: "Desruptive workshop exploring the connection between AI and Creativity"},
+  { title: "TECHNO_FOSSILS_ARCHIVE", image: "src/assets/technofossils/technofossils_cover.png", link: "technofossils", description: "Collecting and reconstructing traces of humanity, making sense of what might be left behind in a post-human world."},
   // add more
 ];
 ---
@@ -22,9 +22,7 @@ const projects = [
 <style>
   .project-grid {
 	display: grid;
-/*	grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 1rem;
-	padding: 2rem;
   }
 </style>

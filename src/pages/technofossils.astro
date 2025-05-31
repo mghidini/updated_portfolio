@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 const { title = "Technofossils", description = "Collecting and reconstructing traces of humanity, making sense of what might be left behind in a post-human world." } = Astro.props;
 
 ---
 
-<Layout>
+<Layout background="var(--pink)">
     <h1>{title}</h1>
     <p class="project-intro">{description}</p>
 
@@ -38,6 +38,4 @@ const { title = "Technofossils", description = "Collecting and reconstructing tr
     <section class="project-section">
       <p>It was a reminder that design is not just about creating, it’s about understanding, preserving, and questioning.</p>
     </section>
-
-    <a href="/" class="back-link">← Back to Projects</a>
 </Layout>

@@ -1,10 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+
+
 const { title = "VIVI", description = "Short intro about the project." } = Astro.props;
 
 ---
 
-<Layout>
+<Layout background="var(--pink)">
     <h1>{title}</h1>
     <p class="project-intro">{description}</p>
 
@@ -69,6 +71,5 @@ VIVI examines your screen time, dating apps behaviours, camera and messages to t
       <section class="project-section">
         <h2>What we learned</h2>
       </section>
-
-    <a href="/" class="back-link">← Back to Projects</a>
+      
 </Layout>

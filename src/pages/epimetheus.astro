@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-const { title = "Epimetheus", description = "Short intro about the project." } = Astro.props;
+import Layout from "../layouts/Layout.astro";
+const { title = "Epimetheus", description = "Visualizing uncertainty and supporting clinical decisions with Machine Learning models." } = Astro.props;
 ---
 
-<Layout>
+<Layout background="var(--pink)">
     <h1>{title}</h1>
     <p class="project-intro">{description}</p>
 
@@ -100,5 +100,4 @@ const { title = "Epimetheus", description = "Short intro about the project." } =
         <p>In the context of technological evolution and the growing importance of data and AI in the healthcare field, applications like Epimetheus represent a valuable resource for improving the quality of medical care, simplifying doctor-patient communication and promoting data understanding.</p>
       </section>
 
-    <a href="/" class="back-link">← Back to Projects</a>
 </Layout>

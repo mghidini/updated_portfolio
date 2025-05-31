@@ -1,33 +1,72 @@
 ---
-
+import '../colors.css'
 ---
 
 <aside class="sidebar">
-    <h1>Matilde Ghidini</h1>
-    <p>Ciao! I'm Matilde Ghidini and this is my portfolio.</p>
+    <h1>Matilde<br>Ghidini</h1>
+    <p>Ciao!<br> I'm Matilde,<br>an aspiring product designer, <br> with a computer science background<br> and a passion for AI.</p>
 
     <nav>
-        <a href="/">Projects</a>
-        <a href="/about">About</a>
+        <a href="/">→ PROJECTS</a>
+        <a href="/about">→ ABOUT</a>
     </nav>
 
     <div class="contact-section">
-        <p>Contact me:</p>
-        <a href="mailto:3GZtH@example.com">3GZtH@example.com</a>
-        <a href="https://www.linkedin.com/in/matildeghidini/">Linkedin</a>
+        <p style="margin-bottom: 0%;">Where to find me:</p>
+        <a href="mailto:matilde.ghidini00@gmail.com" target="_blank">↗ mail</a>
+        <a href="https://www.linkedin.com/in/matilde-ghidini-b223a3238/" target="_blank">↗ Linkedin</a>
+        <a href="https://github.com/mghidini" target="_blank">↗ GitHub</a>
     </div>
 
 </aside>
 
 <style>
+
+    body {
+        margin: 0;
+    }
+
+    .sidebar {
+        padding: 50px;;
+        background-color: var(--beige);
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: var(--fucsia);
+    }
     nav {
         display: flex;
         flex-direction: column;
     }
 
+    nav a { 
+        font-size: 2rem;
+        color: var(--fucsia);
+        text-align: justify;
+        font-weight: 700;
+    }
+
+    nav a:hover {
+        color: var(--blackish);;
+    }
+
     .contact-section {
         display: flex;
         flex-direction: column;
+        margin-top: 25%;
+    }
+
+    .contact-section a {
+        font-size: 1.2rem;
+        font-family: palatino, serif;
+        color: var(--blackish);
+    }
+
+    .contact-section a:hover {
+        color: var(--fucsia);
     }
 </style>
   

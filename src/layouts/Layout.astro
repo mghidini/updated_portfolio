@@ -1,5 +1,8 @@
 ---
 import Sidebar from "../components/Sidebar.astro"
+import '../colors.css'
+
+const {background = "var(--beige)" } = Astro.props;
 ---
 
 <html lang="en">
@@ -8,10 +11,13 @@ import Sidebar from "../components/Sidebar.astro"
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Press+Start+2P&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <title>My Portfolio</title>
+    <title>Matilde Ghidini</title>
+    <link rel="icon" type="image/png" href="">
   </head>
-  <body>
+  <body style={`background-color: ${background};`}>
     <div class="layout">
       <Sidebar />
       <main class="main-content">
@@ -23,52 +29,93 @@ import Sidebar from "../components/Sidebar.astro"
 
 <style is:global>
   h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: "Familjen Grotesk", sans-serif;
+  font-family: palatino, serif;
+  color: var(--blackish);
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: "Familjen Grotesk", sans-serif;
+  font-family: "roboto", sans-serif;
+  color: var(--fucsia);
+;
 }
 
 p {
   font-size: 1.2rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
   font-family: palatino, serif;
+  color: var(--blackish);
+
 }
 
 a {
-  font-family: "Familjen Grotesk", sans-serif;
+  font-family: "roboto", sans-serif;
+  text-decoration: none;
 }
+
+li{
+  color: var(--blackish);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: square;
+}
+
 </style>
 
 <style >
+.roboto-paragraph {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 .familjen-grotesk-paragraph {
   font-family: "Familjen Grotesk", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 }
 
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 50px;
+}
 .layout {
   display: flex;
   min-height: 100vh;
 }
 
 .sidebar {
-  width: 250px;
+  background-color: var(--beige);
+  width: 150px;
   position: fixed;
+  left: 0;
+  top: 0;
   height: 100vh;
   padding: 1rem;
-  background: #f8f8f8;
-}
-
-.main-content {
-  margin-left: 250px;
-  padding: 1rem;
+  z-index: 10;
+  margin: 0;
 }
 
 </style>

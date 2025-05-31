@@ -1,28 +1,48 @@
 ---
-const { title, image, link } = Astro.props;
+const { title, image, link, description } = Astro.props;
+import '../colors.css';
 ---
 
 <a href={link} class="project-card">
   <img src={image} alt={title} />
   <p id ="project-title">{title}</p>
+  <p id ="project-description">{description}</p>
 </a>
 
 <style>
   .project-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: start;
+    justify-content: center;
     padding: 1rem;
-    border: 1px solid #ccc;
+    background-color: white;
   }
 
+  .project-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
   .project-card img {
     max-width: 100%;
     height: auto;
   }
 
   #project-title {
-    font-family: "Familjen Grotesk", sans-serif;
+    font-family: "roboto";
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--fucsia);
+    margin-bottom: 1%;
   }
+
+  #project-description {
+    font-family: palatino;
+    font-size: 1.2rem;
+    color: var(--blackish);
+    
+    margin-top: 0%;
+    margin-right: 5%;
+  }
+
 </style>
