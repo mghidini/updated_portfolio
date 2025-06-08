@@ -8,6 +8,59 @@ const { title = "Vases are not born, they are cooked.", description = "Desruptiv
     <p class="project-intro">{description}</p>
 
     <section class="project-section">
-      <p>Interdisciplinary workshop led by Raquel Quevedo, at Elisava Barcelona.</p>
+      <p>Building a vase is an activity that requires creativity, crafting, handwork.</p>
+      <h3>Can we replicate the process using AI?</h3>
+      <p>This project was part of the interdisciplinary workshop led by Raquel Quevedo, at Elisava Barcelona. The goal was to build a vase using data generated with images and words (prompts)  
+from Midjourney as recipe ingredients.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Step 1: Finding the inspiration</h2>
+      <div class="photo-container">
+        <img src="/src/assets/vases/input1.jpg" alt="Inspiration" />
+        <img src="/src/assets/vases/input2.jpg" alt="Inspiration" />
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Step 2: Experimenting with Midjourney</h2>
+      <div class="photo-container">
+        <img src="/src/assets/vases/output1.png" alt="Inspiration" />
+        <img src="/src/assets/vases/output2.png" alt="Inspiration" />
+        <img src="/src/assets/vases/output3.png" alt="Inspiration" /> 
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Step 3: Building the digital vase using analoue techniques</h2>
+      <div class="photo-container">
+        <img src="/src/assets/vases/1.jpg" alt="Inspiration" />
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Step 4: Capture the analogue form to return to the digital medium.</h2>
+      <div class="photo-container">
+        <img src="/src/assets/vases/11.jpg" alt="Inspiration" />
+        <img src="/src/assets/vases/111.jpg" alt="Inspiration" />
+      </div>
+
     </section>
 </Layout>
+
+<style>
+  .photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .photo-container img {
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+</style>

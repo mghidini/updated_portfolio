@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 
-const { title = "VIVI", description = "Short intro about the project." } = Astro.props;
+const { title = "VIVI", description = "An AI powered chatbot that helps you grow and nurture your relationships." } = Astro.props;
 
 ---
 
@@ -19,11 +19,7 @@ const { title = "VIVI", description = "Short intro about the project." } = Astro
       <h2>What is VIVI?</h2>
       <p>Vivi is a mobile app that logs relationships and how they affect our mental health, while an AI powered chatbot offers support and guidance to help make our relationships last longer and be nurtured in the healthiest way. 
 It was created from the standpoint that AI shouldn’t be used to push people further away form each other as humans, but rather help us come closer together.</p>
-      <p>Love, at the end of the day, it’s what we do best and what could never be replaced.</p>
-    </section>
-
-    <section class="project-section">
-      <h2>Problem and goal</h2>
+      <h3>Love, at the end of the day, it’s what we do best and what could never be replaced.</h3>
     </section>
 
     <section class="project-section">
@@ -39,37 +35,61 @@ the red thread that connect our mission to our reality, as well as working on wi
 With my background in computer science and engineering I fuelled the coding part by
 working on Javascript, , HTML, CSS and Python to develop the webpage that was then
 integrated with the OpenAI GPT model.</p>
-    </section>
 
     <section class="project-section">
-        <h2>Discovery and research</h2>
-    </section>
-
-      <section class="project-section">
-        <h2>CSolution design</h2>
-        <p>Vivi shows up with a calming UI, a caring introduction, and an initial questionnaire about you and your daily life.
+      <h2>Solution design</h2>
+      <p>Vivi shows up with a calming UI, a caring introduction, and an initial questionnaire about you and your daily life.
 Future responses from Vivi reinforces the safety feeling and encourages me to open up more, forming a positive loop.</p>
-        <img src="/images/placeholder2.jpg" alt="Process step" />
-        <p>The fact that Vivi begins our chat by asking questions about my casual life not only builds a warm and curious vibe, but also sets a chitchatting tone for the conversation.</p>
+
+      <div id="onboarding-screenshots">
+        <img src="/src/assets/VIVI/17.png" alt="Process step" />
+        <img src="/src/assets/VIVI/2.png" alt="Process step" />
+        <img src="/src/assets/VIVI/6.png" alt="Process step" />
+      </div>
+
+        <p>The fact that Vivi begins our chat by asking questions about casual life not only builds a warm and curious vibe, but also sets a chitchatting tone for the conversation.</p>
         <p>The power behind Vivi relies on the fact that it knows you, it understand the data of how you behave to help you as deeply as possible without you constantly having to explain yourself.
 This is why VIVI requires access to your information and data.
 VIVI examines your screen time, dating apps behaviours, camera and messages to truly understand how you feel.</p>
-        <img src="/images/placeholder2.jpg" alt="Process step" />
+        
         <p>Privacy is one of the biggest commitments. You choose how much you want to  share, and how you share it. You’re always in control.</p>
-        <img src="/images/placeholder2.jpg" alt="Process step" />
+      <div id="permissions-screenshots">
+        <img src="/src/assets/VIVI/10.png" alt="Process step" />
+        <img src="/src/assets/VIVI/12.png" alt="Process step" />
+      </div>
         <p>For this reason, the app encourages you to build your constellation of relationships and continuously helps you to grow and nurture them, through a personalised chatbot, daily challenges and check-ins.</p>
+        <div id="relationships-screenshots">
+          <img src="/src/assets/VIVI/21.png" alt="Process step" />
+          <img src="/src/assets/VIVI/37.png" alt="Process step" />
+        </div>
       </section>
 
       <section class="project-section">
         <h2>Technical exploration</h2>
-      </section>
+        <p>The first prototype was built using Python Flask and the OpenAI API to make request to the OpenAI model.<br>
+For the fronted we used native HTML, CSS and Javascript to build the chatbot interface.</p> <br>
 
-      <section class="project-section">
-        <h2>Storytelling and branding</h2>
-      </section>
-
-      <section class="project-section">
-        <h2>What we learned</h2>
+<p>You can explore the code <a href="https://github.com/mghidini/VIVI_web_chatbot" target="_blank">here</a>.</p>
       </section>
       
 </Layout>
+
+<style>
+  #onboarding-screenshots,
+  #permissions-screenshots,
+  #relationships-screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: left;
+  }
+  #onboarding-screenshots img,
+  #permissions-screenshots img,
+  #relationships-screenshots img {
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+</style>

@@ -16,6 +16,10 @@ const { title = "Technofossils", description = "Collecting and reconstructing tr
 
     <section class="project-section">
         <p>This project was part of the Elisava School of Design and Engineering's Interdisciplinary Workshop on extinction practices and archiving humanity’s traces, led by Self Segato from Domestic Data Streamers.</p>
+        <video autoplay loop muted id="locandina-video">
+          <source src="/src/assets/technofossils/locandina.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <p>We transformed into teams of researchers, with the objective to create a Museum of Future Identity, each installation pushing the boundaries of imagination and critical thought.</p>
         <p>Me and my team, as digital archaeologists, we worked intensely to collect, analyse, and reconstruct traces of humanity, making sense of what might be left behind in a post-human world.</p>
       </section>  
@@ -33,9 +37,41 @@ const { title = "Technofossils", description = "Collecting and reconstructing tr
       <p>Our technofossil archive became part of the Museum of Future Identity, an exhibition that was held and curated by the students of the workshop.
         In our interactive exhibition, the technofossil website was open for visitors to navigate, while the original objects were set on the table aside.
         The combination between real objects and AI generated fossils created an immersive experience, pushing the boundaries between human and machines, past and future, existence and extinction.</p>
+      <div class="photo-container">
+        <img src="/src/assets/technofossils/schermo1.jpg" alt="Inspiration" />
+        <img src="/src/assets/technofossils/schermo2.jpg" alt="Inspiration" />
+      </div>
     </section>
 
     <section class="project-section">
       <p>It was a reminder that design is not just about creating, it’s about understanding, preserving, and questioning.</p>
     </section>
+
+    <section class="project-section">
+      <h2>Technofossils Archive</h2>
+      <p>You can explore the archive <a href="https://readymag.website/u3767660289/5304622/contacts/" target="_blank">here</a></p>
 </Layout>
+
+<style>
+  .photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .photo-container img {
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  #locandina-video {
+    max-width: 400px;
+    height: auto;
+    margin: 1rem 0;
+    display: block;
+    justify-self: start;
+  }
+</style>

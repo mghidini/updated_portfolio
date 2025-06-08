@@ -29,10 +29,10 @@ const {background = "var(--beige)" } = Astro.props;
 
 <style is:global>
   h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-family: palatino, serif;
-  color: var(--blackish);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: palatino, serif;
+    color: var(--blackish);
 }
 
 h2 {
@@ -40,7 +40,6 @@ h2 {
   margin-bottom: 1rem;
   font-family: "roboto", sans-serif;
   color: var(--fucsia);
-;
 }
 
 p {
@@ -65,6 +64,46 @@ li{
 
 ul {
   list-style-type: square;
+}
+
+img {
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.project-section{
+  width: 80%;
+  text-align: justify;
+}
+
+.project-section img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
 }
 
 </style>
