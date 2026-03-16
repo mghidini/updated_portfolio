@@ -6,5 +6,5 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://mghidini.github.io',
-  //  base: '/updated_portfolio',  // omit this if it's your user/org site
+  base: '/updated_portfolio',  // omit this if it's your user/org site
 });
