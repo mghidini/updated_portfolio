@@ -1,5 +1,6 @@
 ---
 import '../colors.css'
+import { base } from 'astro:config/client';
 ---
 
 <aside class="sidebar">
@@ -7,8 +8,8 @@ import '../colors.css'
     <p>Ciao!<br> I'm Matilde,<br>an aspiring product designer, <br> with a computer science background<br> and a passion for AI.</p>
 
     <nav>
-        <a href="/">→ PROJECTS</a>
-        <a href="/about">→ ABOUT</a>
+        <a href={`${base}/`}>→ PROJECTS</a>
+        <a href={`${base}/about`}>→ ABOUT</a>
     </nav>
 
     <div class="contact-section">
